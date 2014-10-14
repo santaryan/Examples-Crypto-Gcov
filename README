@@ -1,0 +1,16 @@
+%make
+cc -MD -Wall -O0 -fprofile-arcs -ftest-coverage -g   -c enigma3.c
+enigma3.c: In function 'main':
+enigma3.c:111: warning: unused variable 'notch1Idx'
+enigma3.c:110: warning: unused variable 'rDiff'
+enigma3.c:107: warning: unused variable 'bytesRd'
+cc  -Wall -O0 -fprofile-arcs -ftest-coverage -g   -o enigma3 enigma3.o
+%./enigma3
+Will run simple demo
+Input = ENIGMA REVEALED
+Output = QMJIDO MZWZJFJR
+%gcov enigma3.c
+File 'enigma3.c'
+Lines executed:73.47% of 98
+enigma3.c:creating 'enigma3.c.gcov'
+
